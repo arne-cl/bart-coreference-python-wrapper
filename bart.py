@@ -17,6 +17,7 @@ import requests
 
 BART_SERVER = 'http://localhost:8125'
 
+
 def get_coreferences(input_filepath, host=BART_SERVER):
     """
     Takes a plain text file as input, pushes it to a running BART
@@ -39,7 +40,7 @@ if __name__ == '__main__':
     else:
         input_filepath = sys.argv[1]
         output_string = get_coreferences(input_filepath)
-        
+
         output_filepath = sys.argv[2]
         with open(output_filepath, 'w') as output_file:
             output_file.write(output_string)
